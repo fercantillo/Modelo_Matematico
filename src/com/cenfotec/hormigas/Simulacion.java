@@ -203,6 +203,11 @@ public class Simulacion {
         System.out.println("Energía consumida: " + COSTO_MOVIMIENTO);
 
         verificarLlegada();
+
+        // Actualiza el estado si después del movimiento ya no queda energía
+        if (hormiga.getEnergia() < COSTO_MOVIMIENTO) {
+            sinEnergia = true;
+        }
     }
 
     // Verifica si la hormiga llegó al alimento o regresó al hormiguero
