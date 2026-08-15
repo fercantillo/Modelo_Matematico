@@ -19,6 +19,9 @@ public class Main {
         System.out.println("Grado de H: " + grafo.grado(grafo.getNodo("H")));
         System.out.println("Grado de I2: " + grafo.grado(grafo.getNodo("I2")));
         System.out.println("El grafo es conexo: " + grafo.esConexo());
+
+        Simulacion simulacion = new Simulacion(grafo, 15);
+        simulacion.ejecutar();
     }
 
     private static void mostrarAristas(Grafo grafo, String id) {
@@ -30,3 +33,4 @@ public class Main {
         System.out.println();
     }
 }
+
